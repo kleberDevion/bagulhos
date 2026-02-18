@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>my page</title>
+</head>
+<body class="dark-mode">
+    <div class="conteiner-perfil">
+        <div class="logo-div"></div>
+        <div class="nome-autor">
+            <h3 class="meu-nome">@kleberSants</h3>
+        </div>
+        <div class="tema">
+            <button id="mudartema-btn" onclick="mudarTema()">
+              <h1 id="bar">|||</h1>
+            </button>
+        </div>
+    </div>
+
+    <div class="hrefs">
+      <div id="link">
+       <a href="#">Portfolio</a>
+      </div>
+      <div id="link">
+       <a href="#">Portfolio</a>
+      </div>
+      <div id="link">
+       <a href="#">Portfolio</a>
+      </div>
+    </div>
+     <div class="social-icons">
+        <div class="logo-instagram">
+           <img src="Instagram.png">
+        </div>
+        <div class="logo-linkedin">
+           <img src="LinkedIn.png">
+        </div>
+        <div class="logo-github" style="">
+           <img src="uiicon.png.png">
+        </div>
+     </div>
+    <script>
+
+const btn = document.getElementById('mudartema-btn');
+const body = document.body;
+
+btn.addEventListener('click', function mudarTema() {
+
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+    }
+
+    btn.classList.toggle('alinhar-direita');
+});
+
+    </script>
+</body>
+</html>
